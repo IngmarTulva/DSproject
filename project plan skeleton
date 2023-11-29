@@ -1,0 +1,27 @@
+Business understanding
+    • Identifying your business goals 
+        ◦ Background – Issues with children’s health (specifically anelmia), testing difficulties (cost?),  knowledge on parents’ situation – can it be done more thoroughly/effectively? Largely what Subhashini already wrote for the intro slide.
+        ◦ Business goals – Develop a method to assess from prior knowledge the risk of any given child to need thorough medical attention (regarding anemia). How is the situation in the untested group – was their omission justified? Can the cost of testing be brought down while improving results on children with risk?
+        ◦ Business success criteria - 
+    • Assessing your situation 
+        ◦ Inventory of resources – A dataset, three personal computers, python scripting language with plethora of relevant libraries, and three people with rudimentary knowledge on how to do this :)
+        ◦ Requirements, assumptions, and constraints – All work to be finalised by 11th December. Report, written scripts, poster (anything else we need to do?). All necessary data already obtained.
+        ◦ Risks and contingencies – Well, if one of us dies, the others can complete it. Keep the half-cooked results available to others at least on a daily basis?
+        ◦ Terminology – Hm? 
+        ◦ Costs and benefits – Our time and electricity bills that should be spent on some form of studying at this time anyway? Poster printing cost magically covered by the uni. Benefits include our hands-on experience on a project like this; we can also hope or at least pretend that the results shall be useful to children in Nigeria.
+    • Defining your data-mining goals 
+        ◦ Data-mining goals – High-quality source data already at hand and seem to need minimal cleaning. Develop model(s) that predict children who likely need laboratory testing for anemia. Can/should we get our hands on some estimate for testing costs in that country?
+        ◦ Data-mining success criteria – Model’s quality shall be evaluated primarily by true positive ratio (then again, our label is not binary, so this can be a bit tricky). If we take actual testing cost into account then we can perhaps try to invent an optimal cutoff on ROC (again, non-binary issue here). Actual numbers for success criteria?
+
+Data understanding
+    • Gathering data
+        ◦ Outline data requirements – Data exists and is in a readily readable form.
+        ◦ Verify data availability – Idem. 
+        ◦ Define selection criteria – One file already at hand. 
+    • Describing data – csv, rows; columns to be listed. There are two features with 2000-3000 missing values; I would discard these. One feature with 13000 missing values – don’t know but I hate inventing data – with luck, this might prove irrelevant(?). Testing data existing or not existing – this should be used to split the data; model(s) to be built on the former, the latter to be explored with acceptable model.
+    • Exploring data – (looking up and down and wondering what to write here).
+    • Verifying data quality – Seems good at first glance, if not for one feature. “When child put to breast” is a big mess of confusing values and also misses a lot of data.
+Planning the project
+    • Make a detailed plan of your project with a list of tasks. There should be at least five tasks. Specify how many hours each team member will contribute to each task - Decide on the ~1000-missing-values gaps. Define a binary “blood data available” and study if this depends on other data excluding actual blood data (can we easily extrapolate results obtained with existing analyses to those that don’t have it?). We may need rebalancing depending on this. Develop a couple of classifiers and regressors (both) on the data with testing results available. Explore the rest of the data to estimate how bad a situation may have been there.
+    • List the methods and tools that you plan to use. Add any comments about the tasks that you think are important to clarify - Remember to nicely split into test and train sets. Do we need a separate holdout dataset (if we tweak the models heavily)? Rebalancing? Find someone to place a big bet that random forests will excel again. Regressor – lasso for iterpretability?
+
